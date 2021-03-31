@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(217, 215, 221);
+        }
+
+        header {
+            background: rgb(1, 0, 10);
+            font-family: sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        #app {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .color {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your colors:</h1>
+    </header>
+    <main>
+        <div id="app">
+            $content
+        </div>
+</main>
+    <script>
+        function copy_to_buffer(elem) {
+            'use strict'
+            let bgcolor = elem.style.backgroundColor; 
+            let crunch = document.createElement("input");
+            crunch.setAttribute('value', `${bgcolor}`);
+            document.body.appendChild(crunch);
+            crunch.select();
+            document.execCommand("copy");
+            document.body.removeChild(crunch);
+            alert(`Color ${bgcolor} has been copied!`);
+        }
+    </script>
+</body>
+</html>
