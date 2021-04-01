@@ -1,4 +1,4 @@
-class ToHtml
+class ToHtml:
     _color_template = Template(
         open("../res/templates/color.html").read()
     )

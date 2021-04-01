@@ -1,6 +1,6 @@
 from PIL import Image
 
-class ColoreaderModel
+class ColoreaderModel:
     def __init__(self):
         pass
 
